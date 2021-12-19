@@ -1,0 +1,115 @@
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --paragraph-text: hsla(0, 0%, 100%, 0.75);
+  --header-color: hsla(0, 0%, 100%, 0.75);
+  --light-gray: hsl(0, 0%, 95%);
+  --spacing: 2rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-size: 15px;
+  background-color: var(--light-gray);
+}
+
+.main-container {
+  width: 90%;
+  margin: 5rem auto;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.container {
+  padding: var(--spacing);
+}
+
+.sedan-container {
+  background-color: var(--bright-orange);
+}
+
+.suv-container {
+  background-color: var(--dark-cyan);
+}
+
+.luxury-container {
+  background-color: var(--very-dark-cyan);
+}
+
+.section-header {
+  font-family: "Big Shoulders Display", sans-serif;
+  margin: var(--spacing) 0;
+  font-size: 2rem;
+  color: var(--header-color);
+}
+
+.section-content {
+  font-family: "Lexend Deca", sans-serif;
+  line-height: 1.5rem;
+  color: var(--paragraph-text);
+  margin: var(--spacing) 0;
+}
+
+.btn {
+  background-color: var(--light-gray);
+  border-radius: 500px;
+  border: solid 2px transparent;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+
+.btn:active {
+  color: var(--light-gray);
+  border: solid 2px var(--light-gray);
+}
+
+.btn-orange {
+  color: var(--bright-orange);
+}
+
+.btn-orange:active {
+  background-color: var(--bright-orange);
+}
+
+.btn-dark-cyan {
+  color: var(--dark-cyan);
+}
+.btn-dark-cyan:active {
+  background-color: var(--dark-cyan);
+}
+
+.btn-very-dark-cyan {
+  color: var(--very-dark-cyan);
+}
+
+.btn-very-dark-cyan:active {
+  background-color: var(--very-dark-cyan);
+}
+
+@media (min-width: 1400px) {
+  body {
+    height: 100%;
+  }
+  .main-container {
+    display: flex;
+    width: 50%;
+    height: 50vh;
+    max-width: 1000px;
+    /* margin-top: 50%; */
+    margin-top: 50vh;
+    transform: translateY(-50%);
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
